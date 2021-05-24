@@ -1,6 +1,6 @@
 file_dir = r'C:\Users\whittlj2\data\input.csv'
-output_dir = r'C:\Users\whittlj2\data\input.csv'
-delimiter = ','
+output_dir = r'C:\Users\whittlj2\data\output.xlsx'
+delimiter = '|'
 data_type = 'str'
 
 import pandas as pd
@@ -14,5 +14,5 @@ df_file = pd.read_csv(
     , engine = 'python')
 
 
-writer = pd.ExcelWriter(output_dir, engine = 'openpyxl')
-df_file.to_excel(writer, index = False)
+#writer = pd.ExcelWriter(output_dir, engine = 'openpyxl')
+df_file.to_excel(output_dir, index = False)
